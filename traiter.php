@@ -1,6 +1,6 @@
 <?php
 
-function virifier() {
+function verifier() {
 
     $Nom = $_POST['Nom'];
     $Prenom = $_POST['Prenom'];
@@ -16,35 +16,35 @@ function virifier() {
   
   if ($Nom === '') {
 
-	array_push($errors, 'veuuller svp ajouter votre nome'); }
+	array_push($errors, 'veuillez svp ajouter votre nom'); }
 
   if ($Prenom === '') {
 
-    array_push($errors, 'veuuller svp ajouter votre nome');}
+    array_push($errors, 'veuillez svp ajouter votre prenom');}
 
   if ($NumTel === '') {
 
-    array_push($errors, 'veuuller svp ajouter votre nome');}
+    array_push($errors, 'veuillez svp ajouter votre numero de telephone');}
 
   if ($DateDepart === '') {
 
-    array_push($errors, 'veuuller svp ajouter votre nome');}
+    array_push($errors, 'veuillez svp ajouter votre date de depart');}
 
   if ($DateRetour === '') {
 
-    array_push($errors, 'veuuller svp ajouter votre nome');}
+    array_push($errors, 'veuillez svp ajouter votre date de retour');}
 
  if ($Genre === null ) {
 
-	array_push($errors, 'veuuller svp ajouter votre gender matahchemch');
+	array_push($errors, 'veuillez svp ajouter votre genre');
 
 } if ($Statut === null ) {
 
-	array_push($errors, 'veuuller svp ajouter votre gender matahchemch');
+	array_push($errors, 'veuillez svp ajouter votre statu');
 
 } if ($Raisons === null ) {
 
-	array_push($errors, 'veuuller svp ajouter votre gender matahchemch');
+	array_push($errors, 'veuillez svp ajouter vos raisons');
 
 }
 
@@ -55,7 +55,7 @@ function virifier() {
 
 function affich_err() {
 
-  $errors = virifier();
+  $errors = verifier();
 
   if ($errors !== []) {
 
@@ -74,7 +74,7 @@ function affich_err() {
 
 }
 
-// afficher tout les errors
+// afficher tout les erreurs
 $errs = affich_err();
 
 
@@ -83,7 +83,7 @@ $errs = affich_err();
 
 function Afficher(){
 
-  $all = virifier();
+  $all = verifier();
 
   if ($all === []) {
 
